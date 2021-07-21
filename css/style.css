@@ -33,14 +33,14 @@
 }
 
 .navbar__center__brand {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #fbd214;
   font-weight: 700;
 }
 
 .navbar__center__toggler {
   color: #cccccc;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .navbar__center__nav {
@@ -176,6 +176,17 @@
 .hero__center__container__img {
   width: 100%;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .hero__center__info__title {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  .hero__center__info__descri {
+    font-size: 1.3rem;
+  }
 }
 
 .about__center__header__title {

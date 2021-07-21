@@ -46,4 +46,13 @@
     }
 }
 
-@media (min-width:$layout-breakpoint-small) {}
+@media (max-width:$layout-breakpoint-small) {
+    .hero__center__info__title{
+font-size: 3rem;
+padding-bottom: 2rem;
+padding-top: 2rem;
+    }
+    .hero__center__info__descri{
+          font-size: 1.3rem;
+    }
+}
