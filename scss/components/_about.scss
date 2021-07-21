@@ -1,0 +1,77 @@
+@import "./utilities";
+@import "./variables";
+
+.about{
+    background:$secondary-bg ;
+    &__center{
+        padding: 3rem;
+        max-width: 1170px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         flex-wrap: wrap;
+        margin-left:auto;
+        margin-right: auto;
+        &__header{
+            &__title{
+        
+                @extend %title;
+                color: $title-color;
+                align-self: center;
+            }
+            &__underline {
+                 @extend %line;      
+            }
+        }
+        &__desc{
+            padding-top: 2rem;
+            width: 45%;
+            &__text{
+                padding-bottom: 1.5rem;
+            }
+            &__btns{
+                display: flex;
+                padding-top: 1rem;
+                &__btn1{
+                    @extend %btn;
+                    padding-right:2rem;
+                    padding-left:2rem;
+                    letter-spacing: 0;
+                    margin-right: 2rem;
+                }
+                &__btn2{
+                    @extend %btn;
+                    padding-right:2rem;
+                    padding-left:2rem;
+                    letter-spacing: 0;
+                    background-color: transparent;
+                    color: $secondary-color;
+                    border: 2px solid $secondary-color;
+                    &:hover{
+                        background-color: $secondary-color;
+                        color: white;
+
+                    }
+                } 
+            }
+        }
+        
+    }
+
+}
+
+@media(max-width:$layout-breakpoint-small) {
+   .about__center__desc{
+       width: 100%;
+   }
+    .center {
+        padding-left: 1rem;
+        padding-right: 1em;
+    }
+    .about__center__desc__btns__btn1,
+    .about__center__desc__btns__btn2{
+        padding: .6rem 1.3rem;
+        font-size: .9rem;
+    }
+
+}

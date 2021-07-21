@@ -1,0 +1,87 @@
+@import "./variables";
+
+  .active{
+      color: $secondary-color !important;
+      position: relative !important;
+      &::after {
+          content: "" !important;
+          position: absolute !important;
+          border-bottom: 2px solid $secondary-color !important;
+          bottom: 0 !important;
+          left: 0 !important;
+          right:30% !important;
+        
+      }
+      
+    }
+.navbar{
+    background:$primary-bg;
+    &__center{
+        max-width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__brand{
+            font-size: 2.5rem;
+            color: $primary-color;
+            font-weight: 700;
+        }
+        &__toggler{
+            color: $title-color;
+            font-size: 2rem;
+        }
+        &__nav{
+            display: flex;
+            li{
+                list-style-type: none;
+                  margin-left: 2rem;
+                
+            }
+            &__link{
+                text-decoration: none;
+                display: inline-block;
+                color: $title-color;
+                padding-bottom: .2rem;
+                font-size:.9rem;
+                font-weight: 500;
+                position: relative;
+                  &:hover {
+                      color: $secondary-color;
+                  }
+                &::after{
+                    content:"";
+                    position: absolute;
+                    border-bottom: 2px solid $secondary-color;
+                    bottom: 0;
+                    left: 0;
+                    right: 100%;
+                     transition: all .5s;
+                }     
+                &:hover::after{
+                    right: 30%;
+                }
+
+                 }
+            }
+        }
+    }
+
+
+@media (min-width:$layout-breakpoint-small){
+.navbar__center__toggler {
+    display: none;
+}
+}
+@media(max-width:$layout-breakpoint-small){
+   .navbar__center__nav{
+       display: none;
+   } 
+}
+@media(max-width:900px) {
+     .center {
+         padding-left: 1rem;
+         padding-right: 1em;
+     }
+}
