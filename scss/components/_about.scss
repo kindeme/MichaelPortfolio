@@ -4,7 +4,7 @@
 .about{
     background:$secondary-bg ;
     &__center{
-        @extend %center;
+         @include center;
         padding: 3rem;
          display: flex;
          align-items: center;
@@ -12,13 +12,11 @@
          flex-wrap: wrap;
         &__header{
             &__title{
-        
-                @extend %title;
-                color: $title-color;
+                 @include title;
                 align-self: center;
             }
             &__underline {
-                 @extend %line;      
+                 @include line;
             }
         }
         &__desc{
@@ -31,14 +29,14 @@
                 display: flex;
                 padding-top: 1rem;
                 &__btn1{
-                    @extend %btn;
+                   @include btn;
                     padding-right:2rem;
                     padding-left:2rem;
                     letter-spacing: 0;
                     margin-right: 2rem;
                 }
                 &__btn2{
-                    @extend %btn;
+                    @include btn;
                     padding-right:2rem;
                     padding-left:2rem;
                     letter-spacing: 0;
@@ -62,9 +60,16 @@
    .about__center__desc{
        width: 100%;
    }
+   .about__center__header{
+       @include margin;
+   }
+.about__center__header__underline{
+     @include margin;
+}
+
     .center {
         padding-left: 1rem;
-        padding-right: 1em;
+        padding-right: 1rem;
     }
     .about__center__desc__btns__btn1,
     .about__center__desc__btns__btn2{

@@ -1,10 +1,99 @@
-
 @import "./variables";
 @import "./utilities";
 
-.services{
+.article1{
+    background:linear-gradient(90deg, rgba(57, 219, 253, 1) 0%, rgba(55, 153, 251, 1) 100%);
+}
+.article2{
+    background: linear-gradient(90deg, rgba(252, 203, 54, 1) 0%, rgba(252, 175, 60, 1) 100%);
+}
+.article3{
+    background: linear-gradient(90deg, rgba(226, 70, 193, 1) 0%, rgba(173, 66, 236, 1) 100%);
+}
+.article4{
+    background: linear-gradient(90deg, rgba(30, 201, 123, 1) 0%, rgba(5, 196, 20, 1) 100%);
+}
+.services {
     background: $primary-bg;
-    &__center{
-        @extend %center;
+    &__center {
+        @include center;
+
+        &__header {
+            text-align: center;
+
+            &__title {
+                @include title;
+            }
+
+            &__underline {
+                @include line;
+                margin-left: auto;
+                margin-right: auto;
+
+            }
+
+            &__info {
+                margin: 2.2rem;
+
+            }
+        }
+
+        &__articles{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2rem;
+            padding-top: 3rem;
+             padding-bottom: 3rem;
+            
+
+            &__item{
+                position: relative;
+                color: white;
+                &__container{
+                 
+                 border-radius: 10px;
+              
+                &__img{
+                   display: block;
+                    width: 100%; 
+                    opacity: .2;  
+                     border-radius: 10px;
+                    height: 310px;
+                }
+            }
+                &__info {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                    padding: 3.5rem 3rem ;
+                    &__icon{
+                        font-size: 3rem;
+                       
+                    }
+                    &__title{
+                        font-size: 2rem;
+                        padding-bottom: 1rem;
+                        font-weight: 500;
+                        letter-spacing: .1;
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media (max-width:$layout-breakpoint-small) {
+    .services__center__articles{
+          grid-template-columns: 1fr;
+    }
+    .services__center__header__title{
+        font-size: 1.5rem;
+    }
+    .services__center{
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }

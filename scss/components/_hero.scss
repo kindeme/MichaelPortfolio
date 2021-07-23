@@ -31,7 +31,7 @@
             }
 
             &__btn {
-                @extend %btn;
+                 @include btn;
             }
         }
 
