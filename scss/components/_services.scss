@@ -1,0 +1,10 @@
+
+@import "./variables";
+@import "./utilities";
+
+.services{
+    background: $primary-bg;
+    &__center{
+        @extend %center;
+    }
+}

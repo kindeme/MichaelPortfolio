@@ -4,14 +4,12 @@
 .about{
     background:$secondary-bg ;
     &__center{
+        @extend %center;
         padding: 3rem;
-        max-width: 1170px;
          display: flex;
          align-items: center;
          justify-content: space-between;
          flex-wrap: wrap;
-        margin-left:auto;
-        margin-right: auto;
         &__header{
             &__title{
         
