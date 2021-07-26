@@ -19,7 +19,7 @@
         &__info {
             &__title {
                 color: white;
-                font-size: 4.2rem;
+                font-size: 3.7rem;
                 font-weight: 600;
                 letter-spacing: .1rem;
             }
@@ -36,11 +36,14 @@
         }
 
         &__container {
-            padding-top: 4rem;
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+            display: block;
 
             &__img {
-                width: 100%;
-                height: auto;
+                width: 450px;
+                height:450px;
+                border-radius: 50%;
             }
         }
     }
