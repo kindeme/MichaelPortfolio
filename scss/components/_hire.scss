@@ -1,0 +1,59 @@
+@import "./utilities";
+@import "./variables";
+
+
+
+.hire {
+    background: $secondary-bg;
+    padding-bottom: 1rem;
+
+    &__center {
+        @include center;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        &__header {
+            text-align: center;
+
+            &__title {
+                @include title;
+                font-size: 2rem;
+                padding-bottom: 1rem
+            }
+
+            &__underline {
+                @include line;
+                margin-left: auto;
+                margin-right: auto;
+                background: white ;
+                margin-bottom: 4rem;
+               
+            }
+
+            &__btn {
+             
+               background-color: white;
+               border-radius: 5px;
+               color: black;
+               padding: 1.1rem 4rem;
+               font-weight: 500;
+               letter-spacing: .1rem;
+               font-size: 1.2rem;
+               text-decoration: none;
+               transition: all .6s;
+
+               &:hover {
+                   background-color: $secondary-color;
+                   color: white;
+                //    border: 2px solid $secondary-color;
+               }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .hire__center__header__title {
+        font-size: 2.7rem;
+    }
+}

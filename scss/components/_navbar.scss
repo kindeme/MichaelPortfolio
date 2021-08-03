@@ -81,10 +81,10 @@
    } 
 
 }
-@media(max-width:900px) {
+@media(min-width:700px) {
      .center {
-         padding-left: 1rem;
-         padding-right: 1em;
+         padding-left: 2rem;
+         padding-right: 2rem;
      }
 
 }

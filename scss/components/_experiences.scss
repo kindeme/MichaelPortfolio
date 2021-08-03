@@ -1,0 +1,84 @@
+@import "./utilities";
+@import "./variables";
+
+.experience {
+    background: $primary-bg;
+    padding-bottom: 1rem;
+
+    &__center {
+        @include center;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        &__header {
+            text-align: center;
+
+            &__title {
+                @include title;
+                font-size: 2rem;
+            }
+
+            &__underline {
+                @include line;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            &__info {
+                margin: 2.2rem;
+            }
+        }
+        &__project{
+            padding-top: 2rem;
+            display: grid;
+            grid-gap: 2rem;
+            grid-template-columns: 1fr;
+            &__item{
+                border: 1px solid #7e7e7e;
+                padding: 2rem;
+                background: #3b3939;
+                transition: all .8s;
+                &:hover{
+                     background: $primary-color;
+                }
+                &__duration{
+                    letter-spacing: 0.1rem;
+                    font-size: .9rem;
+                    font-weight: lighter;
+                    color: #7e7e7e;
+                    padding-bottom: .5rem;
+                }
+
+                 &__title {
+                   
+                     font-size: 1.3rem;
+                     font-weight: 500;
+                     color: white;
+                     padding-bottom: .5rem;
+                 }
+
+                 &__company {
+                     font-size: .9rem;
+                     font-weight: lighter;
+                     color: #7e7e7e;
+                     padding-bottom: .5rem;
+                 }
+                 &__text{
+                     padding-top: 1rem;
+                 }
+            }
+        }
+
+
+    }
+}    
+        
+@media screen and (min-width:768px){
+    .experience__center__project{
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:0;
+    }
+    .experience__center__header__title{
+        font-size: 3rem;
+    }
+}
