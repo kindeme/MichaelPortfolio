@@ -85,6 +85,13 @@
     }
 }
 
+@media (max-width:100px) {
+    .services__center {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+}
 @media (max-width:$layout-breakpoint-small) {
     .services__center__articles{
           grid-template-columns: 1fr;
@@ -92,8 +99,5 @@
     .services__center__header__title{
         font-size: 2rem;
     }
-    .services__center{
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
+    
 }
