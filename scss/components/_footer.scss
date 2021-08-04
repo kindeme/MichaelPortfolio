@@ -1,0 +1,19 @@
+@import "./variables";
+@import "./utilities";
+
+.social{
+    background:$primary-bg ;
+    padding-top: 3rem;
+    &__center{
+        margin-left: auto;
+         margin-right: auto;
+        max-width: 40rem;
+        text-align: center;
+        &__text{
+            padding-top: 2rem;
+        }
+    }
+}
+.footer{
+    border-top: 1px solid #7e7e7e;
+}

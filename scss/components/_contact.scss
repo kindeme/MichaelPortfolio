@@ -1,0 +1,34 @@
+@import "./utilities";
+@import "./variables";
+
+.contact {
+    background: $primary-bg;
+    padding-bottom: 1rem;
+
+    &__center {
+        @include center;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        &__header {
+            text-align: center;
+
+            &__title {
+                @include title;
+                font-size: 2rem;
+            }
+
+            &__underline {
+                @include line;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+@media screen and (min-width:768px) {
+
+    .contact__center__header__title {
+        font-size: 3rem;
+    }
+}
